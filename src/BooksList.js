@@ -49,6 +49,15 @@
              <h1>Title: {book.title}</h1>
                
         <h3>Author Name: {book.author_name}</h3>
+        {book.cover_i ? (
+    <img
+      src={`https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`}
+      alt={`Cover of ${book.title}`}
+      style={{ width: "150px", height: "auto", marginTop: "10px" }}
+    />
+  ) : (
+    <p>No cover image available</p>
+  )}
          </div>
         
         ))):<h2>No Books Found</h2>}
